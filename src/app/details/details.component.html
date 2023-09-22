@@ -1,0 +1,26 @@
+<h1 class=" text-center">Plant Details</h1>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Common Name</th>
+			<th scope="col">Scientific Name</th>
+			<th scope="col">Water Frequency</th>
+            <th scope="col">Sunlight Exposure</th>
+            <th scope="col">Temperature Preferences</th>
+            <th scope="col">Soil Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let plant of plants; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>{{ plant.commonName }}</td>
+			<td>{{ plant.scientificName }}</td>
+			<td>{{ plant.waterFrequency }}</td>
+            <td>{{ plant.sunlightExposure }}</td>
+            <td>{{ plant.temperaturePreferences }}</td>
+            <td>{{ plant.soilType }}</td>
+		</tr>
+	</tbody>
+</table>

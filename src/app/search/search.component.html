@@ -1,0 +1,17 @@
+<p>search works!</p>
+<input [(ngModel)]="searchQuery" placeholder="Enter Username or Subscription ID" class="form-control mr-2" />
+<button class="btn btn-primary" (click)="fetchData()">Search</button>
+
+<div *ngIf="data">
+    <tbody>
+		<tr>
+			<td>{{ data.commonName }}</td>
+			<td>{{ data.scientificName }}</td>
+			<td>{{ data.waterFrequency }}</td>
+            <td>{{ data.sunlightExposure }}</td>
+            <td>{{ data.temperaturePreferences }}</td>
+            <td>{{ data.soilType }}</td>
+		</tr>
+	</tbody>
+
+</div>
